@@ -1,0 +1,37 @@
+<article class="card-product">
+  <header class="card-product__header">
+    <h2>{{ product.name }}</h2>
+
+    <div class="actions">
+      <app-icon-button
+        class="card-product__btn"
+        iconSrc="icons/icon-leave.svg"
+        altText="icon"
+      />
+      <app-icon-button
+        class="card-product__btn"
+        iconSrc="icons/icon-fire.svg"
+        altText="icon"
+      />
+    </div>
+  </header>
+  <section class="card-product__section">
+    <div class="card-product__section__product-img">
+      <img [src]="product.productImg" alt="product image">
+    </div>
+    <p class="card-product__section__product-description">{{ product.description }}</p>
+  </section>
+  <footer class="card-product__footer">
+    <div class="card-product__product-price">
+      <span class="card-product__product-price--new">${{ product.price }}</span>
+      @if (product.oldPrice) {
+        <span class="card-product__product-price--old">${{ product.oldPrice }}</span>
+      }
+    </div>
+    <app-button
+      class="card-product__btn"
+      label="order now"
+      variant="outline"
+    ></app-button>
+  </footer>
+</article>
