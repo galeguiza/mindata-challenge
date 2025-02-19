@@ -1,0 +1,72 @@
+@use '../../../../styles/variables.global' as *;
+@use '../../../../styles/mixins' as *;
+
+.card-product {
+  @include card(300px, 400px, 60px 290px 50px);
+  grid-template-areas:
+    "header"
+    "section"
+    "footer";
+}
+
+.card-product__header { grid-area: header; }
+.card-product__section { grid-area: section; }
+.card-product__footer { grid-area: footer; }
+
+.card-product__header {
+  height: 60px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+  }
+
+  .actions {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.card-product__section {
+  .card-product__section__product-img {
+    height: 150px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center 58%;
+      height: 100%;
+    }
+  }
+
+  .card-product__section__product-description {
+    padding: 0px 20px;
+  }
+}
+
+.card-product__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 20px;
+
+  .card-product__product-price {
+    display: flex;
+    gap: 5px;
+
+    .card-product__product-price--new {
+      display: block;
+    }
+
+    .card-product__product-price--old {
+      display: block;
+      color: $font-color-red;
+      text-decoration: line-through;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<article class="card-user-list">
+  <header class="card-user-list__header">
+    <h2 class="card-user-list__title">{{ title }}</h2>
+    <p class="card-user-list__description">{{ description }}</p>
+  </header>
+  <section class="card-user-list__section">
+    @for (user of users; track $index) {
+      <div class="card-user-list__user">
+        <div class="card-user-list__avatar">
+          <div class="card-user-list__avatar-inner">
+            <img
+              [src]="user.avatar"
+              alt="avatar"
+              class="card-user-list__avatar-img"
+            >
+          </div>
+        </div>
+        <div class="card-user-list__user-name">
+          <span class="card-user-list__user-name__fullname">{{ user.fullname }}</span>
+          <br>
+          <span class="card-user-list__user-name__activity">{{ user.activity }}</span>
+        </div>
+        <app-button
+          class="card-user-list__btn"
+          label="FOLLOW"
+          variant="primary"
+        ></app-button>
+      </div>
+    }
+  </section>
+  <footer class="card-user-list__footer">
+    <div>
+      <span class="card-user-list__footer__users">{{ totalUsers }} students</span>
+    </div>
+    <div>
+      <app-button
+        class="card-user-list__btn"
+        label="view all members"
+        variant="link"
+      ></app-button>
+    </div>
+  </footer>
+</article>

@@ -1,0 +1,33 @@
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &--small {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--medium {
+    width: 48px;
+    height: 48px;
+  }
+
+  &--large {
+    width: 64px;
+    height: 64px;
+  }
+}

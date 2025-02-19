@@ -1,0 +1,15 @@
+<article class="card-content">
+  <header class="card-content__header">
+    <img [src]="headerBackground" alt="header-background">
+  </header>
+  <section class="card-content__section">
+    <h2 class="card-content__title">{{ title }}</h2>
+    <p class="card-content__description">{{ description }}</p>
+    <app-button
+      class="card-content__btn"
+      label="action now"
+      variant="accent"
+      shape="rounded"
+    ></app-button>
+  </section>
+</article>

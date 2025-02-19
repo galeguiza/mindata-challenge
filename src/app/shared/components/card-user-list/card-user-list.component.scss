@@ -1,0 +1,82 @@
+@use '../../../../styles/variables.global' as *;
+@use '../../../../styles/mixins' as *;
+
+.card-user-list {
+  @include card(300px, 600px, 150px 400px 50px);
+}
+
+.card-user-list__header {
+  width: 100%;
+  padding: 15px 15px 0px 15px;
+  box-sizing: border-box;
+
+  .card-user-list__description {
+    color: $font-color-secondary;
+    font-weight: $font-weight-light
+  }
+}
+
+.card-user-list__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.card-user-list__user {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 0 10px;
+  grid-template-areas: "avatar username btn";
+  align-items: center;
+}
+
+.card-user-list__avatar { grid-area: avatar; }
+.card-user-list__user-name { grid-area: username; }
+.card-user-list__btn { grid-area: btn; }
+
+.card-user-list__footer {
+  background-color: #FBFBFB;
+  padding: 10px 15px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+
+  .card-user-list__footer__users {
+    color: $font-color-secondary;
+    font-size: $font-size-small;
+  }
+}
+
+.card-user-list__avatar-inner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid $secondary-color;
+  padding: 3px;
+  background-color: $background-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-user-list__avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-user-list__user-name {
+  .card-user-list__user-name__fullname {
+    color: $font-color-primary;
+    font-weight: $font-weight-bold;
+  }
+
+  .card-user-list__user-name__activity {
+    color: $font-color-secondary;
+    font-weight: $font-weight-light;
+  }
+}
