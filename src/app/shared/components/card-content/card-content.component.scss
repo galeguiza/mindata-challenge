@@ -1,0 +1,30 @@
+@use '../../../../styles/variables.global' as *;
+@use '../../../../styles/mixins' as *;
+
+.card-content {
+  @include card(300px, 500px, null, center);
+}
+
+.card-content__header {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card-content__section {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-around;
+  padding: 0px 15px 10px;
+
+  .card-content__description {
+    color: $font-color-secondary;
+    font-weight: $font-weight-light;
+  }
+}
