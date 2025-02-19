@@ -1,8 +1,17 @@
 <div class="dashboard">
   <div class="dashboard__cards-container">
-    <div class="card card-1">card 1</div>
-    <div class="card card-2">card 2</div>
-    <div class="card card-3">card 3</div>
-    <div class="card card-4">card 4</div>
+    <app-card-user-list
+      title="Minim dolorin"
+      description="Sed do eiusmod tempor incididunt ut labore et dolore"
+      [users]="users"
+      [totalUsers]="534"
+    />
+    <app-card-user-profile [user]="users[0]" />
+    <app-card-product [product]="product"/>
+    <app-card-content
+      title="Ui card long title for test"
+      description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      headerBackground="card-content-img.png"
+    />
   </div>
 </div>

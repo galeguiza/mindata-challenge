@@ -1,25 +1,28 @@
-@import "../../styles/breakpoints";
+@use '../../styles/breakpoints.scss' as *;
 
 .dashboard {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
 }
 
 .dashboard__cards-container {
   display: grid;
+  gap: 20px;
   grid-template-columns: 1fr;
+  align-items: center;
+  padding-bottom: 20px;
 }
 
 @include tablet {
-  .cards-container {
+  .dashboard__cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @include desktop {
-  flex-direction: row;
-  
-  .cards-container {
+  .dashboard__cards-container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
