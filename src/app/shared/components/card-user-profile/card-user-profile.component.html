@@ -1,0 +1,32 @@
+<article class="card-user-profile">
+  <header class="card-user-profile__header">
+    <div class="card-user-profile__avatar">
+      <div class="card-user-profile__avatar-inner">
+        <img
+          [src]="user.avatar"
+          alt="avatar"
+          class="card-user-profile__avatar-img"
+        >
+      </div>
+    </div>
+  </header>
+  <section class="card-user-profile__section">
+    <p>
+      <span class="card-user-profile__section__fullname">{{ user.fullname }}</span>
+      <br>
+      <span class="card-user-profile__section__activity">{{ user.activity }}</span>
+    </p>
+    <div class="card-user-profile__actions">
+      <app-button
+        class="card-user-profile__btn"
+        label="button"
+        variant="outline"
+      ></app-button>
+      <app-button
+        class="card-user-profile__btn"
+        label="button"
+        variant="secondary"
+      ></app-button>
+    </div>
+  </section>
+</article>
