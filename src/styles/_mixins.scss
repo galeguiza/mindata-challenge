@@ -1,0 +1,22 @@
+@use './variables.global' as *;
+
+@mixin card($width, $height, $grid-template-rows: null, $grid-template-columns: null, $text-align: null) {
+  width: $width;
+  height: $height;
+  background-color: $background-white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @if $grid-template-rows {
+    display: grid;
+    grid-template-rows: $grid-template-rows;
+  }
+
+  @if $grid-template-columns {
+    grid-template-columns: $grid-template-columns;
+  }
+
+  @if $text-align {
+    text-align: $text-align;
+  }
+}
