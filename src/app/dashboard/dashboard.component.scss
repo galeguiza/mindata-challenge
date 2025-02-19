@@ -1,0 +1,44 @@
+@import "../../styles/breakpoints";
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard__cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@include tablet {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include desktop {
+  flex-direction: row;
+  
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  height: 300px;
+  width: 200px;
+  border: 1px solid #222;
+
+  &.card-1{
+    background-color: aquamarine;
+  }
+  &.card-2{
+    background-color: aquamarine;
+  }
+  &.card-3{
+    background-color: aquamarine;
+  }
+  &.card-4{
+    background-color: aquamarine;
+  }
+}
